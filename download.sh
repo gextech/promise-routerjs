@@ -12,11 +12,12 @@ fi
 
 # transforms RSVP
 printf "\rFetching rsvp ... "
-echo "(function(){var window={};$(curl -sL $RSVP);exports['default']=window.RSVP;})();" > $LIBDIR/rsvp.js
+curl -sL $RSVP | sed "s/window.RSVP/exports['default']/g" | sed 's/(window)/(this)/g' > $LIBDIR/rsvp.js
 echo "OK"
 
+# transforms router.js
 printf "\rFetching router.js ... "
-echo "$(curl -sL $ROUTERJS | sed 's/require("/require(".\//g')" > $LIBDIR/router.js
+curl -sL $ROUTERJS | sed 's/require("/require(".\//g' > $LIBDIR/router.js
 echo "OK"
 
 printf "\rFetching route-recognizer ... "
