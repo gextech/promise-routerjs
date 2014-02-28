@@ -6,8 +6,13 @@
     "type": "git",
     "url": "git://github.com/pateketrueke/promise-routerjs.git"
   },
-  "main": "lib/promise.js",
-  "dependencies": {
-    "promise-polyfill": "~1.0.6"
-  }
+  "keywords": [
+    "router",
+    "route-recognizer",
+    "bluebird"
+  ],
+  "scripts": {
+    "prepublish": "./download.sh"
+  },
+  "main": "lib/router.js"
 }
