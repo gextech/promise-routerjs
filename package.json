@@ -14,5 +14,8 @@
   "scripts": {
     "prepublish": "./download.sh"
   },
-  "main": "lib/router.js"
+  "main": "lib/router.js",
+  "devDependencies": {
+    "bluebird": "^1.0.7"
+  }
 }
