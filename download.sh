@@ -1,7 +1,6 @@
 #!/bin/bash
 
 ROUTERJS="http://routerjs.builds.emberjs.com.s3.amazonaws.com/router.cjs-latest.js"
-ROUTE_RECOGNIZER="https://raw.github.com/tildeio/route-recognizer/master/dist/route-recognizer.cjs.js"
 
 LIBDIR="$PWD/lib"
 
@@ -11,9 +10,8 @@ fi
 
 # transforms router.js
 printf "\rFetching router.js ... "
-curl -sL $ROUTERJS | sed 's/require("/require(".\//g' > $LIBDIR/router.js
-echo "OK"
-
-printf "\rFetching route-recognizer ... "
-curl -sL $ROUTE_RECOGNIZER > $LIBDIR/route-recognizer.js
+JS=$(curl -sL $ROUTERJS | grep "var RouteRecognizer" -A 1500 -B 18)
+echo "$JS" | grep "var RSVP" -B 19 | head --lines=-1 > $LIBDIR/router.js
+echo "var RSVP = require('bluebird');" >>  $LIBDIR/router.js
+echo "$JS" | grep "var slice" -A 1500 >> $LIBDIR/router.js
 echo "OK"
