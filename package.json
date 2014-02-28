@@ -1,6 +1,6 @@
 {
   "name": "routerjs",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Custom build for router.js using bluebird",
   "repository": {
     "type": "git",
@@ -15,7 +15,7 @@
     "prepublish": "./download.sh"
   },
   "main": "lib/router.js",
-  "devDependencies": {
+  "dependencies": {
     "route-recognizer": "^0.1.0",
     "bluebird": "^1.0.7"
   }
