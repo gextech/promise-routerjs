@@ -1,11 +1,20 @@
 This repository mirrors the CommonJS version of [router.js](https://github.com/tildeio/router.js) and all its dependencies within.
 
-> A big difference here is not using [RSVP](https://github.com/tildeio/rsvp.js),
-> instead it's using [bluebird](https://github.com/petkaantonov/bluebird) for Promise handling.
+> We can use different Promise implementations (bluebird by default).
+
+> * [RSVP](https://github.com/tildeio/rsvp.js)
+> * [bluebird](https://github.com/petkaantonov/bluebird)
+
+Locally we can install any of these using:
+
+```bash
+$ npm install rsvp
+$ ./download.sh rsvp
+```
 
 You can install it as NPM module and then using Browserify bring it out to the _window_.
 
-```
+```bash
 $ npm install routerjs
 $ browserify main.js --no-detect-globals > router.js
 ```
