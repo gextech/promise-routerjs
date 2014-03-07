@@ -1,1 +1,1 @@
-('undefined' !== typeof window ? window : this).Promise = require('./lib/promise');
+('undefined' !== typeof window ? window : this).Router = require('./lib/router')['default'];
