@@ -1,16 +1,6 @@
 This repository mirrors the CommonJS version of [router.js](https://github.com/tildeio/router.js) and all its dependencies within.
 
-> We can use different Promise implementations (bluebird by default).
-
-> * [RSVP](https://github.com/tildeio/rsvp.js)
-> * [bluebird](https://github.com/petkaantonov/bluebird)
-
-Locally we can install any of these using:
-
-```bash
-$ npm install rsvp
-$ ./download.sh rsvp
-```
+> We're using a patched version of [promise-polyfill](https://github.com/taylorhakes/promise-polyfill) providing the barebones for Promise implementation.
 
 You can install it as NPM module and then using Browserify bring it out to the _window_.
 

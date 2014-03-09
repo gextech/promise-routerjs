@@ -1,15 +1,14 @@
 {
   "name": "routerjs",
-  "version": "0.1.2",
-  "description": "Custom build for router.js using bluebird",
+  "version": "0.1.3",
+  "description": "Custom build for router.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/pateketrueke/promise-routerjs.git"
   },
   "keywords": [
     "router",
-    "route-recognizer",
-    "bluebird"
+    "route-recognizer"
   ],
   "scripts": {
     "prepublish": "./download.sh"
@@ -17,6 +16,6 @@
   "main": "lib/router.js",
   "dependencies": {
     "route-recognizer": "^0.1.0",
-    "bluebird": "^1.0.7"
+    "promise-routerjs": "^0.1.0"
   }
 }
