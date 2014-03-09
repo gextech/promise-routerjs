@@ -1,0 +1,13 @@
+{
+  "name": "promise-routerjs",
+  "version": "0.1.0",
+  "description": "Extends promise-polyfill for minimal use with router.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pateketrueke/promise-routerjs.git"
+  },
+  "main": "lib/promise.js",
+  "dependencies": {
+    "promise-polyfill": "^1.0.5"
+  }
+}
