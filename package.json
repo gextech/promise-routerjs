@@ -1,6 +1,6 @@
 {
   "name": "routerjs",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Custom build for router.js",
   "repository": {
     "type": "git",
@@ -16,6 +16,6 @@
   "main": "lib/router.js",
   "dependencies": {
     "route-recognizer": "^0.1.0",
-    "promise-routerjs": "^0.1.0"
+    "promise-routerjs": "~0.1.2"
   }
 }

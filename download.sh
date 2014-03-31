@@ -14,5 +14,6 @@ JS=$(curl -sL $ROUTERJS | grep "var RouteRecognizer" -A 1500 -B 18)
 RSVP='__es6_transpiler_build_module_object__("RSVP", require("rsvp"))'
 
 echo "$JS" | sed "s/$RSVP/require('promise-routerjs')/g" > $LIBDIR/router.js
+echo 'exports["promise"] = RSVP;' >> $LIBDIR/router.js
 
 echo "OK"
