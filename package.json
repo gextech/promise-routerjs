@@ -1,6 +1,6 @@
 {
   "name": "promise-routerjs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Extends promise-polyfill for minimal use with router.js",
   "repository": {
     "type": "git",
