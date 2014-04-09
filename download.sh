@@ -1,19 +1,14 @@
 #!/bin/bash
 
 ROUTERJS="http://routerjs.builds.emberjs.com.s3.amazonaws.com/router.cjs-latest.js"
-LIBDIR="$PWD/lib"
-
-if [ ! -d "$LIBDIR"  ]; then
-  mkdir -p $LIBDIR
-fi
 
 # transforms router.js
 printf "\rFetching router.js ... "
 
 JS=$(curl -sL $ROUTERJS | grep "var RouteRecognizer" -A 1500 -B 18)
 RSVP='__es6_transpiler_build_module_object__("RSVP", require("rsvp"))'
+PROMISE='("undefined" !== typeof window ? window : global).Promise = require(".\/promise")'
 
-echo "$JS" | sed "s/$RSVP/require('promise-routerjs')/g" > $LIBDIR/router.js
-echo 'exports["promise"] = RSVP;' >> $LIBDIR/router.js
+echo "$JS" | sed "s/$RSVP/$PROMISE/g" > $PWD/lib/router.js
 
 echo "OK"
