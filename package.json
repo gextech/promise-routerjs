@@ -1,6 +1,6 @@
 {
-  "name": "routerjs",
-  "version": "0.1.4",
+  "name": "promise-routerjs",
+  "version": "0.2.0",
   "description": "Custom build for router.js",
   "repository": {
     "type": "git",
@@ -8,14 +8,12 @@
   },
   "keywords": [
     "router",
-    "route-recognizer"
+    "route-recognizer",
+    "promise-polyfill"
   ],
-  "scripts": {
-    "prepublish": "./download.sh"
-  },
   "main": "lib/router.js",
   "dependencies": {
     "route-recognizer": "^0.1.0",
-    "promise-routerjs": "~0.1.2"
+    "promise-polyfill": "~1.0.6"
   }
 }
