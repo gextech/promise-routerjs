@@ -1,6 +1,6 @@
 {
   "name": "promise-routerjs",
-  "version": "0.3.0"
+  "version": "0.3.0",
   "description": "Custom build for router.js",
   "repository": {
     "type": "git",
