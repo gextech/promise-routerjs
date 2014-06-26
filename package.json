@@ -1,15 +1,15 @@
 {
   "name": "promise-routerjs",
-  "version": "0.2.2",
+  "version": "0.3.0"
   "description": "Custom build for router.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/pateketrueke/promise-routerjs.git"
+    "url": "git://github.com/gextech/promise-routerjs.git"
   },
   "keywords": [
     "router",
     "route-recognizer",
-    "promise-polyfill"
+    "es6-promise"
   ],
   "main": "lib/router.js",
   "dependencies": {
