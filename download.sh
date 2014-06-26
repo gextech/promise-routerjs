@@ -7,7 +7,7 @@ printf "\rFetching router.js ... "
 
 JS=$(curl -sL $ROUTERJS | grep "var RouteRecognizer" -A 1500 -B 18)
 RSVP='__es6_transpiler_build_module_object__("RSVP", require("rsvp"))'
-PROMISE='("undefined" !== typeof window ? window : global).Promise = require(".\/promise")'
+PROMISE='require(".\/promise")'
 
 echo "$JS" | sed "s/$RSVP/$PROMISE/g" > $PWD/lib/router.js
 
